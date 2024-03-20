@@ -3,7 +3,8 @@ name: toggl sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0/10 * * * *"
+    - cron: "0/240 0,21 * * *"
+    - cron: "0/20 22,00 * * *"
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
